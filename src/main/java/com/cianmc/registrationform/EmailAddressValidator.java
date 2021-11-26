@@ -24,4 +24,11 @@ public class EmailAddressValidator {
         Matcher matcher = pattern.matcher(parts[0]);
         return matcher.matches();
     }
+
+    public static boolean isValidDomain(String email) {
+        Pattern pattern = Pattern.compile(regex);
+        String[] parts = email.split("@");
+        Matcher matcher = pattern.matcher(parts[1]);
+        return matcher.matches();
+    }
 }
