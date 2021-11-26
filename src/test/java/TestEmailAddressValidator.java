@@ -14,4 +14,9 @@ public class TestEmailAddressValidator {
     public void testNoAt() {
         assertFalse(EmailAddressValidator.isValid("gmail.com"));
     }
+
+    @Test
+    public void testValidUsername() {
+        assertFalse(EmailAddressValidator.isValid("@gmail.com"));
+    }
 }
