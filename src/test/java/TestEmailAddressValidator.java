@@ -19,4 +19,8 @@ public class TestEmailAddressValidator {
     public void testValidUsername() {
         assertFalse(EmailAddressValidator.isValid("@gmail.com"));
     }
+    @Test
+    public void testValidDomain() {
+        assertFalse(EmailAddressValidator.isValid("hello@gg"));
+    }
 }
