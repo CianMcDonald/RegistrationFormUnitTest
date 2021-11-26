@@ -9,4 +9,9 @@ public class TestEmailAddressValidator {
     public void testTooShort() {
         assertFalse(EmailAddressValidator.isValid(""));
     }
+
+    @Test
+    public void testNoAt() {
+        assertFalse(EmailAddressValidator.isValid("gmail.com"));
+    }
 }
