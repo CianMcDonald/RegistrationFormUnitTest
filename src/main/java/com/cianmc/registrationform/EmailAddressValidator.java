@@ -1,6 +1,12 @@
 package com.cianmc.registrationform;
 
+import javafx.css.Match;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class EmailAddressValidator {
+    private static final String regex = "^[A-Za-z0-9+_.-]";
     public static boolean isValid(String email) {
         return isTooShort(email) && containsAt(email) && isValidUsername(email);
     }
@@ -13,7 +19,9 @@ public class EmailAddressValidator {
     }
 
     public static boolean isValidUsername(String email) {
+        Pattern pattern = Pattern.compile(regex);
         String[] parts = email.split("@");
-        return parts[0].length() > 0;
+        Matcher matcher = pattern.matcher(parts[0]);
+        return matcher.matches();
     }
 }
