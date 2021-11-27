@@ -13,4 +13,9 @@ public class TestPasswordValidation {
     public void testContainsLetter() {
         assertFalse(PasswordValidation.isValid("1234567"));
     }
+
+    @Test
+    public void testContainsDigit() {
+        assertFalse(PasswordValidation.isValid("abcdefghij"));
+    }
 }
