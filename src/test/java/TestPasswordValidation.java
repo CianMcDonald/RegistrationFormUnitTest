@@ -1,12 +1,16 @@
 import com.cianmc.registrationform.PasswordValidation;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestPasswordValidation {
     @Test
     public void testValidLength() {
-        assertTrue(PasswordValidation.isValid("1234567"));
+        assertTrue(PasswordValidation.isValid("abc1234"));
+    }
+
+    @Test
+    public void testContainsLetter() {
+        assertFalse(PasswordValidation.isValid("1234567"));
     }
 }
