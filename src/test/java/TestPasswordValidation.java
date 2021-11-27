@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestPasswordValidation {
     @Test
     public void testValidLength() {
-        assertTrue(PasswordValidation.isValid("abc1234"));
+        assertTrue(PasswordValidation.isValid("abc1&234"));
     }
 
     @Test
