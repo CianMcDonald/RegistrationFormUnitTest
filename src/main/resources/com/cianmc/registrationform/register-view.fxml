@@ -62,4 +62,7 @@
             <Insets top="20"  bottom="20" />
         </GridPane.margin>
     </Button>
+    <Label fx:id="responseLabel" GridPane.columnIndex="0"
+           GridPane.rowIndex="5" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+    </Label>
 </GridPane>
